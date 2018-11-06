@@ -18,7 +18,7 @@ export default class Imageslider extends Component {
 
       handlePrev = () => {
         this.setState(({idx}) => ({
-            idx: idx === this.state.images.length - 1 ? 0 : --idx
+            idx: idx === 0 ? this.state.images.length - 1  : --idx
           }))
     }
     render() {

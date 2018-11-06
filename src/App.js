@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import ImageSlider from './ImageSlider';
-
-
+import Imageslider from './ImageSlider';
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ImageSlider />
+         <Imageslider />
       </div>
-    );
+    )
   }
 }
 
