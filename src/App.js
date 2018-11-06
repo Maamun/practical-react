@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Counter } from './Counter';
+import MyForm from './MyForm';
 class App extends Component {
   state = {
     visible: true
@@ -10,14 +10,7 @@ class App extends Component {
   
     return (
       <div className="App">
-      <div style={!this.state.visible ? {display: 'none'}: {}}>
-      <Counter />
-      </div>
-      <button onClick={() => {
-        this.setState({
-          visible: !this.state.visible
-        })
-      }}>Toogle Counter</button>
+      <MyForm />
       </div>
     )
   }
