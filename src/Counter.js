@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 export class Counter extends Component {
     state = {count: 0}
+
+    componentWillUnmount = () => {
+      console.log('====================================');
+      console.log('unmounting...');
+      console.log('====================================');
+    }
+    
+      componentDidMount () {
+          console.log('====================================');
+          console.log('Mounting...');
+          console.log('====================================');
+      }
         
     
     increment = () =>  {

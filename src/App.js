@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import Imageslider from './ImageSlider';
+import { Counter } from './Counter';
 class App extends Component {
   state = {
-    visible: true,
-    label: 'Hide'
+    visible: true
   }
-  handleClick = () => {
-    this.setState(({visible, label}) => ({
-      visible: !visible
-    }))
-  }
+
   render() {
-    const btnText = this.state.visible ? 'hide' : 'show'
+    
     return (
       <div className="App">
-      <button onClick={this.handleClick}>{btnText}</button>
-      {this.state.visible ? <Imageslider /> : null}
+      {this.state.visible ? <Counter /> : null}
+      <button onClick={() => {
+        this.setState({visible: !this.state.visible})
+      }}>Toggle counter</button>
       </div>
     )
   }
