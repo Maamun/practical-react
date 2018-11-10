@@ -8,10 +8,15 @@ class App extends Component {
   state = {
     fields: {}
   }
-  onSubmit = (fields) => {
-    this.setState({ fields })
+  onChange = updatedValue => {
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        ...updatedValue
+      }
+    })
       console.log('====================================');
-      console.log(fields);
+      console.log(updatedValue);
       console.log('====================================');
   }
   render() {
@@ -19,7 +24,7 @@ class App extends Component {
     return ( 
       <div className="App">
       {/*<Form3 onSubmit={(x) => console.log(x)} id='Nosnos'/>*/}
-      <Form3 onSubmit={this.onSubmit}/>
+      <Form3 onChange={this.onChange}/>
 
 <p>{JSON.stringify(this.state.fields, null ,2)}</p>
       
